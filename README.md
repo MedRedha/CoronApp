@@ -1,4 +1,4 @@
-<h1 align="center">**CoronApp**</h1>
+<h1 align="center">CoronApp</h1>
 
 <p align="center">
 	<a href="https://wuud.net">
@@ -23,19 +23,16 @@
 <br>
 <br>
 
-### <h1 align="center"> Powered by [StickyBoard](https://github.com/soaple/stickyboard/)</h1>
+### <h1 align="center"> Global dashboard for monitoring Corona virus (COVID-19)</h1>
+<p align="center">
+    Powered by [StickyBoard](https://github.com/soaple/stickyboard/)
+</p>
 
 <p align="center" style="justify-content: space-between">
 	<a href="https://gitmoji.carloscuesta.me">
         <img width="130" height="150" src="https://github.com/soaple/stickyboard/blob/master/src/static/image/StickyBoard_logo.png?raw=true" alt="stickyboard">
     </a>
 </p>
-<br>
-<br>
-
-## About
-
-Global dashboard for monitoring Corona virus (COVID-19)
 
 ## Build & Run
 
@@ -62,60 +59,60 @@ $ npm run production
 
 ## Dev Team
 
-  <table align="center">
-    <tbody>
-      <tr>
-        <td align="center" valign="top" width="11%">
-          <a href="https://github.com/badjio">
-            <img
-              alt="Backend Developer"
-              src="https://avatars2.githubusercontent.com/u/15873766?s=400&v=4"
-              style="border-radius: 50px"
-              width="100"
-              height="100"
-            />
-            <br />
-            <br />
-            <i>Moh Badjah</i>
-            <br />
-          </a>
-          <i>Backend Developer</i>
-        </td>
-        <td align="center" valign="top" width="11%">
-          <a href="https://github.com/na6im">
-            <img
-              alt="Web Developer"
-              src="https://avatars1.githubusercontent.com/u/38627023?s=400&v=4"
-              style="border-radius: 50px"
-              width="100"
-              height="100"
-            />
-            <br />
-            <br />
-            <i>Nassim Amokrane</i>
-            <br />
-          </a>
-          <i>Web Developer</i>
-        </td>
-        <td align="center" valign="top" width="11%">
-          <a href="https://github.com/MedRedha">
-            <img
-              alt="Mobile Developer"
-              src="https://github.com/medredha.png?s=75"
-              style="border-radius: 50px"
-              width="100"
-              height="100"
-            />
-            <br />
-            <br />
-            <i>Med Redha</i>
-            <br />
-          </a>
-          <i>Mobile Developer</i>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+<table align="center">
+<tbody>
+  <tr>
+    <td align="center" valign="top" width="11%">
+      <a href="https://github.com/badjio">
+        <img
+          alt="Backend Developer"
+          src="https://avatars2.githubusercontent.com/u/15873766?s=400&v=4"
+          style="border-radius: 50px"
+          width="100"
+          height="100"
+        />
+        <br />
+        <br />
+        <i>Moh Badjah</i>
+        <br />
+      </a>
+      <i>Backend Developer</i>
+    </td>
+    <td align="center" valign="top" width="11%">
+      <a href="https://github.com/na6im">
+        <img
+          alt="Web Developer"
+          src="https://avatars1.githubusercontent.com/u/38627023?s=400&v=4"
+          style="border-radius: 50px"
+          width="100"
+          height="100"
+        />
+        <br />
+        <br />
+        <i>Nassim Amokrane</i>
+        <br />
+      </a>
+      <i>Web Developer</i>
+    </td>
+    <td align="center" valign="top" width="11%">
+      <a href="https://github.com/MedRedha">
+        <img
+          alt="Mobile Developer"
+          src="https://github.com/medredha.png?s=75"
+          style="border-radius: 50px"
+          width="100"
+          height="100"
+        />
+        <br />
+        <br />
+        <i>Med Redha</i>
+        <br />
+      </a>
+      <i>Mobile Developer</i>
+    </td>
+  </tr>
+</tbody>
+</table>
 
 
 ## Attribution
