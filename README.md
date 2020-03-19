@@ -1,8 +1,22 @@
 # CoronApp
 
-<img alt="NPM" src="https://img.shields.io/npm/l/react?color=black"> <img alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/TeamWuuD/WuuD-Website?color=red&label=Version"> <img alt="GitHub package.json dependency version (prod)" src="https://img.shields.io/github/package-json/dependency-version/TeamWuuD/WuuD-Website/react"> <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/TeamWuuD/WuuD-Website?color=purple"> <img alt="Website" src="https://img.shields.io/website?down_color=red&down_message=maintenance&style=flat-square&up_message=online&url=https%3A%2F%2Fwuud.net"> <img alt="GitHub stars" src="https://img.shields.io/github/stars/TeamWuuD/WuuD-Website?style=social">
+<img alt="NPM" src="https://img.shields.io/npm/l/react?color=black"> 
+<img alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/MedRedha/CoronApp?color=red&label=Version">
+<img alt="GitHub package.json dependency version (prod)" src="https://img.shields.io/github/package-json/dependency-version/MedRedha/CoronApp/react"> 
+<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/TeamWuuD/WuuD-Website?color=purple"> 
+<img alt="Website" src="https://img.shields.io/website?down_color=red&down_message=maintenance&style=flat-square&up_message=online&url=https%3A%2F%2Fwuud.net">
+ <img alt="GitHub stars" src="https://img.shields.io/github/stars/TeamWuuD/WuuD-Website?style=social">
 
-Global dashboard for monitoring Corona virus (COVID-19)
+## Powered by
+
+<p style="align-items: center">
+  <img width="160" height="169" src="https://github.com/TeamWuuD/WuuD-Website/blob/master/favicon.ico?raw=true">
+  <img width="130" height="150" src="https://github.com/soaple/stickyboard/blob/master/src/static/image/StickyBoard_logo.png?raw=true">
+</p>
+<br>
+<br>
+
+_Global dashboard for monitoring Corona virus (COVID-19)_
 
 ## Build & Run
 
@@ -65,7 +79,6 @@ $ npm run production
 
 ## Attribution
 
--   Original Version by [Soaple](https://github.com/soaple/corona-board)
 -   Global Corona Dashboard powered by [StickyBoard](https://github.com/soaple/stickyboard/)
 -   API deployed and operated by [Ainize](https://ainize.ai/laeyoung/wuhan-coronavirus-api)
 -   Data provided by [JHU CSSE](https://github.com/CSSEGISandData/COVID-19)
