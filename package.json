@@ -2,7 +2,9 @@
     "name": "CoronApp",
     "version": "2.0.0",
     "private": true,
-    "author": "Med Redha",
+    "author": "The WuuD Team",
+    "licence": "MIT",
+    "homepage": "https://wuud.net",
     "scripts": {
         "clean": "rimraf dist",
         "watch": "npm run clean && NODE_ENV=development npm run build-lib && NODE_ENV=development npm run watch-app",
