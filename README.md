@@ -1,4 +1,4 @@
-# CoronApp
+<h1 align="center">**CoronApp**</h1>
 
 <p align="center">
 	<a href="https://wuud.net">
@@ -23,20 +23,22 @@
 <br>
 <br>
 
-### Powered by [StickyBoard](https://github.com/soaple/stickyboard/) & [Gitmoji](https://gitmoji.carloscuesta.me)
+### <h1 align="center"> Powered by [StickyBoard](https://github.com/soaple/stickyboard/)</h1>
+
 <p align="center" style="justify-content: space-between">
 	<a href="https://gitmoji.carloscuesta.me">
         <img width="130" height="150" src="https://github.com/soaple/stickyboard/blob/master/src/static/image/StickyBoard_logo.png?raw=true" alt="stickyboard">
-        <img src="https://cloud.githubusercontent.com/assets/7629661/20073135/4e3db2c2-a52b-11e6-85e1-661a8212045a.gif" width="456" alt="gitmoji">
     </a>
 </p>
 <br>
 <br>
 
 ## About
+
 Global dashboard for monitoring Corona virus (COVID-19)
 
 ## Build & Run
+
 #### Prerequisite
 
 ```bsh
@@ -60,39 +62,61 @@ $ npm run production
 
 ## Dev Team
 
-  <table>
-		<tbody>
-			<tr>
-				<td align="center" valign="top" width="11%">
-					<a href="https://github.com/badjio">
-						<img alt="Backend Developer" src="https://avatars2.githubusercontent.com/u/15873766?s=400&v=4" style="border-radius: 50px" width="100" height="100">
-							<br />
-							<br>
-								<i>Moh Badjah</i>
-                            <br/>
-                    </a>
-                </td>
-                <td align="center" valign="top" width="11%">
-                    <a href="https://github.com/na6im">
-                        <img alt="Web Developer" src="https://avatars1.githubusercontent.com/u/38627023?s=400&v=4" style="border-radius: 50px" width="100" height="100">
-                            <br />
-                            <br>
-                                <i>Nassim Amokrane</i>
-                            <br/>
-                    </a>
-                </td>
-                <td align="center" valign="top" width="11%">
-                    <a href="https://github.com/MedRedha">
-                        <img alt="Mobile Developer" src="https://github.com/medredha.png?s=75" style="border-radius: 50px" width="100" height="100">
-                        <br />
-                            <br>
-                                <i>Med Redha</i>
-                         <br/>
-                  </a>  
-                </td>
-        </tr>
-      </tbody>
-    </table>
+  <table align="center">
+    <tbody>
+      <tr>
+        <td align="center" valign="top" width="11%">
+          <a href="https://github.com/badjio">
+            <img
+              alt="Backend Developer"
+              src="https://avatars2.githubusercontent.com/u/15873766?s=400&v=4"
+              style="border-radius: 50px"
+              width="100"
+              height="100"
+            />
+            <br />
+            <br />
+            <i>Moh Badjah</i>
+            <br />
+          </a>
+          <i>Backend Developer</i>
+        </td>
+        <td align="center" valign="top" width="11%">
+          <a href="https://github.com/na6im">
+            <img
+              alt="Web Developer"
+              src="https://avatars1.githubusercontent.com/u/38627023?s=400&v=4"
+              style="border-radius: 50px"
+              width="100"
+              height="100"
+            />
+            <br />
+            <br />
+            <i>Nassim Amokrane</i>
+            <br />
+          </a>
+          <i>Web Developer</i>
+        </td>
+        <td align="center" valign="top" width="11%">
+          <a href="https://github.com/MedRedha">
+            <img
+              alt="Mobile Developer"
+              src="https://github.com/medredha.png?s=75"
+              style="border-radius: 50px"
+              width="100"
+              height="100"
+            />
+            <br />
+            <br />
+            <i>Med Redha</i>
+            <br />
+          </a>
+          <i>Mobile Developer</i>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
 
 ## Attribution
 
@@ -100,12 +124,12 @@ $ npm run production
 -   API deployed and operated by [Ainize](https://ainize.ai/laeyoung/wuhan-coronavirus-api)
 -   Data provided by [JHU CSSE](https://github.com/CSSEGISandData/COVID-19)
 
-## Contributing to gitmoji
+## Contributing to CoronApp
 
-Contributing to gitmoji is a piece of :cake:, read the [contributing guidelines](https://github.com/carloscuesta/gitmoji/blob/master/.github/CONTRIBUTING.md). You can discuss emojis using the [issues section](https://github.com/carloscuesta/gitmoji/issues/new). To add a new emoji to the list create an issue and send a pull request, see [how to send a pull request and add a gitmoji](https://github.com/carloscuesta/gitmoji/blob/master/.github/CONTRIBUTING.md#how-to-add-a-gitmoji).
+Contributing to CoronApp is a piece of :cake:, read the [contributing guidelines](https://github.com/MedRedha/CoronApp/blob/master/.github/CONTRIBUTING.md). You can discuss CoronApp using the [issues section](https://github.com/MedRedha/CoronApp/issues/new). To add a line create an issue and send a pull request, see [how to send a pull request](https://github.com/MedRedha/CoronApp/blob/master/.github/CONTRIBUTING.md).
 
 ## License
 
-The code is available under the [MIT](https://github.com/carloscuesta/gitmoji/blob/master/LICENSE) license.
+The code is available under the [MIT](https://github.com/MedRedha/CoronApp/blob/master/LICENSE) license.
 
 ###### [WuuD®](http://wuud.net/) - in code we trust -
