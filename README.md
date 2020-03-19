@@ -22,34 +22,36 @@
 
 <br>
 <br>
-Powered by
-<p align="center">
-	<a href="https://wuud.net">
-		<img width="130" height="150" src="https://github.com/soaple/stickyboard/blob/master/src/static/image/StickyBoard_logo.png?raw=true" alt="stickyboard">
-	</a>
+
+### Powered by [StickyBoard](https://github.com/soaple/stickyboard/) & [Gitmoji](https://gitmoji.carloscuesta.me)
+<p align="center" style="justify-content: space-between">
+	<a href="https://gitmoji.carloscuesta.me">
+        <img width="130" height="150" src="https://github.com/soaple/stickyboard/blob/master/src/static/image/StickyBoard_logo.png?raw=true" alt="stickyboard">
+        <img src="https://cloud.githubusercontent.com/assets/7629661/20073135/4e3db2c2-a52b-11e6-85e1-661a8212045a.gif" width="456" alt="gitmoji">
+    </a>
 </p>
 <br>
 <br>
 
-_Global dashboard for monitoring Corona virus (COVID-19)_
+## About
+Global dashboard for monitoring Corona virus (COVID-19)
 
 ## Build & Run
-
-### Prerequisite
+#### Prerequisite
 
 ```bsh
 $ npm install -g nodemon
 $ npm install
 ```
 
-### Development Mode
+#### Development Mode
 
 ```bsh
 $ npm run build
 $ npm start
 ```
 
-### Production Mode
+#### Production Mode
 
 ```bsh
 $ npm run build
@@ -67,25 +69,25 @@ $ npm run production
 							<br />
 							<br>
 								<i>Moh Badjah</i>
-								<br/>
-							</a>
-          </td>
-						<td align="center" valign="top" width="11%">
-							<a href="https://github.com/na6im">
-								<img alt="Web Developer" src="https://avatars1.githubusercontent.com/u/38627023?s=400&v=4" style="border-radius: 50px" width="100" height="100">
-									<br />
-									<br>
-										<i>Nassim Amokrane</i>
-										<br/>
-									</a>
-								</td>
-								<td align="center" valign="top" width="11%">
-									<a href="https://github.com/MedRedha">
-										<img alt="Mobile Developer" src="https://github.com/medredha.png?s=75" style="border-radius: 50px" width="100" height="100">
-											<br />
-											<br>
-												<i>Med Redha</i>
-                      <br/>
+                            <br/>
+                    </a>
+                </td>
+                <td align="center" valign="top" width="11%">
+                    <a href="https://github.com/na6im">
+                        <img alt="Web Developer" src="https://avatars1.githubusercontent.com/u/38627023?s=400&v=4" style="border-radius: 50px" width="100" height="100">
+                            <br />
+                            <br>
+                                <i>Nassim Amokrane</i>
+                            <br/>
+                    </a>
+                </td>
+                <td align="center" valign="top" width="11%">
+                    <a href="https://github.com/MedRedha">
+                        <img alt="Mobile Developer" src="https://github.com/medredha.png?s=75" style="border-radius: 50px" width="100" height="100">
+                        <br />
+                            <br>
+                                <i>Med Redha</i>
+                         <br/>
                   </a>  
                 </td>
         </tr>
@@ -97,5 +99,13 @@ $ npm run production
 -   Global Corona Dashboard powered by [StickyBoard](https://github.com/soaple/stickyboard/)
 -   API deployed and operated by [Ainize](https://ainize.ai/laeyoung/wuhan-coronavirus-api)
 -   Data provided by [JHU CSSE](https://github.com/CSSEGISandData/COVID-19)
+
+## Contributing to gitmoji
+
+Contributing to gitmoji is a piece of :cake:, read the [contributing guidelines](https://github.com/carloscuesta/gitmoji/blob/master/.github/CONTRIBUTING.md). You can discuss emojis using the [issues section](https://github.com/carloscuesta/gitmoji/issues/new). To add a new emoji to the list create an issue and send a pull request, see [how to send a pull request and add a gitmoji](https://github.com/carloscuesta/gitmoji/blob/master/.github/CONTRIBUTING.md#how-to-add-a-gitmoji).
+
+## License
+
+The code is available under the [MIT](https://github.com/carloscuesta/gitmoji/blob/master/LICENSE) license.
 
 ###### [WuuD®](http://wuud.net/) - in code we trust -
