@@ -123,7 +123,7 @@ class DashboardPage extends React.Component {
 
         const initialCountryName = LocalStorageManager.getItem(
             LocalStorageConst.KEY.SELECTED_COUNTRY,
-            'Algeria'
+            'Algeria, Algiers'
         );
 
         this.state = {
@@ -527,13 +527,13 @@ class DashboardPage extends React.Component {
                 return (
                     <Sticker key={block.i}>
                         <HeatMap
-                            zoom={1}
+                            zoom={3.5}
                             minZoom={2}
                             maxZoom={17}
                             blur={40}
                             radius={40}
-                            longitude={36.7538}
-                            latitude={3.0588}
+                            longitude={1.6596}
+                            latitude={28.0339}
                             pointList={pointList}
                         />
                     </Sticker>
