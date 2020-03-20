@@ -73,7 +73,8 @@
         "sha256": "^0.2.0",
         "styled-components": "^4.3.2",
         "tls": "0.0.1",
-        "underscore": "^1.9.1"
+        "underscore": "^1.9.1",
+        "react-resizable": "latest"
     },
     "devDependencies": {
         "@babel/core": "^7.5.5",
