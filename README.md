@@ -26,13 +26,12 @@
 ### <h1 align="center"> Global dashboard for monitoring Corona virus (COVID-19)</h1>
 
 <p align="center">
-    Powered by StickyBoard
+    Powered by StickyBoard & Docker
 </p>
 
 <p align="center" style="justify-content: space-between">
-	<a href="https://github.com/soaple/stickyboard/">
-        <img width="130" height="150" src="https://github.com/soaple/stickyboard/blob/master/src/static/image/StickyBoard_logo.png?raw=true" alt="stickyboard">
-    </a>
+        	<img width="130" height="150" src="https://github.com/soaple/stickyboard/blob/master/src/static/image/StickyBoard_logo.png?raw=true" alt="stickyboard">
+		<img width="160" height="150" src="https://logo-logos.com/wp-content/uploads/2016/10/Docker_logo.png" alt="docker">
 </p>
 
 ## Build & Run
