@@ -47,8 +47,6 @@ import CookieManager from 'network/CookieManager';
 
 import DrawerMenu from './DrawerMenu';
 
-import LogoIcon from 'components/ui/LogoIcon';
-
 import Const from '../../constants/Const';
 
 import DateUtil from '../../utils/DateUtil';
@@ -83,7 +81,6 @@ const styles = (theme) => ({
     },
     appBarTitle: {
         fontSize: 16,
-        // color: theme.colors.colorDark,
         '&:hover': {
             cursor: 'pointer',
         },
@@ -435,17 +432,25 @@ class Layout extends React.Component {
                                 </IconButton>
                             </Hidden>
 
-                            <Hidden xsDown>
-                                <div style={{ padding: 8 }}>
-                                    <LogoIcon
-                                        width={32}
-                                        height={32}
-                                        fill={theme.colors.appBarContentText}
-                                    />
-                                </div>
-                            </Hidden>
+                            {/*<Hidden xsDown>*/}
+                            {/*    <div*/}
+                            {/*        style={{*/}
+                            {/*            marginLeft: 8,*/}
+                            {/*            marginRight: 5,*/}
+                            {/*        }}>*/}
+                            {/*        <img*/}
+                            {/*            width={35}*/}
+                            {/*            height={35}*/}
+                            {/*            color="inherit"*/}
+                            {/*            src={*/}
+                            {/*                'https://i.ya-webdesign.com/images/virus-transparent-animated-gif.gif'*/}
+                            {/*            }*/}
+                            {/*        />*/}
+                            {/*    </div>*/}
+                            {/*</Hidden>*/}
 
                             <Typography
+                                style={{ marginLeft: 40 }}
                                 type="title"
                                 color="inherit"
                                 noWrap
@@ -453,21 +458,25 @@ class Layout extends React.Component {
                                 onClick={() => {
                                     window.location = '/';
                                 }}>
-                                CoronApp
+                                <img
+                                    width={120}
+                                    height={35}
+                                    color="inherit"
+                                    src={
+                                        'https://belong.life/wp-content/uploads/2020/03/CoronAppLogo_Final-1.png'
+                                    }
+                                />
                             </Typography>
 
-                            <Typography
-                                className={
-                                    classes.appBarTitleMargin
-                                }></Typography>
+                            <Typography className={classes.appBarTitleMargin} />
 
                             <Hidden xsDown>
                                 <a
                                     className={classes.appBarStickyBoard}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    href={'http://stickyboard.co.kr'}>
-                                    Powered by <b>StickyBoard</b>
+                                    href={'http://wuud.net'}>
+                                    Enhanced by <b>The WuuD Team</b>
                                 </a>
                             </Hidden>
 
