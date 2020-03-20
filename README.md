@@ -24,6 +24,7 @@
 <br>
 
 ### <h1 align="center"> Global dashboard for monitoring Corona virus (COVID-19)</h1>
+
 <p align="center">
     Powered by StickyBoard
 </p>
@@ -43,11 +44,33 @@ $ npm install -g nodemon
 $ npm install
 ```
 
+### Dockerize
+
+##### Build docker image
+
+Enable [Docker Buildkit](https://docs.docker.com/develop/develop-images/build_enhancements/#to-enable-buildkit-builds) to speed up build
+
+```bsh
+$ DOCKER_BUILDKIT=1 docker build -t <dockerhub_username>/<dockerhub_repo_name>:latest .
+```
+
+##### Run
+
+```bsh
+$ docker run -p 3000:3000 <dockerhub_username>/<dockerhub_repo_name>:latest
+```
+
+##### Push docker image to DockerHub
+
+```bsh
+$ docker push <dockerhub_username>/<dockerhub_repo_name>:latest
+```
+
 #### Development Mode
 
 ```bsh
-$ npm run build
-$ npm start
+$ npm run watch
+$ npm run dev
 ```
 
 #### Production Mode
@@ -113,7 +136,6 @@ $ npm run production
   </tr>
 </tbody>
 </table>
-
 
 ## Attribution
 
