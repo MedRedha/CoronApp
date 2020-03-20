@@ -206,7 +206,7 @@ class DrawerMenu extends React.Component {
                             className={classes.attributionItem}
                             target="_blank"
                             rel="noopener noreferrer"
-                            href={'https://github.com/MedRedha/coronapp'}>
+                            href={'https://github.com/MedRedha/CoronApp'}>
                             GitHub repository <b>CoronApp</b>
                         </a>
                     </div>
