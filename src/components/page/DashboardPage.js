@@ -1,42 +1,22 @@
-// src/components/page/DashboardPage.js
-
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import { withStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
 import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
-import Typography from '@material-ui/core/Typography';
 import PersonIcon from '@material-ui/icons/Person';
 import LocalHospitalIcon from '@material-ui/icons/LocalHospital';
 import AirlineSeatIcon from '@material-ui/icons/AirlineSeatFlat';
 import ReportIcon from '@material-ui/icons/Report';
 import { Sticker } from '@stickyboard/core';
-import {
-    LineChart,
-    MultiLineChart,
-    BarChart,
-    StackedBarChart,
-    ComposedChart,
-    PieChart,
-    RadarChart,
-    AreaChart,
-    ScatterChart,
-    Treemap,
-} from '@stickyboard/recharts';
+import { MultiLineChart, ComposedChart } from '@stickyboard/recharts';
 import { NumberWidget } from '@stickyboard/number';
 import { HeatMap } from '@stickyboard/openlayers';
-
 import ApiManager from 'network/ApiManager';
 import StatusCode from 'network/StatusCode';
-
 import LocalStorageManager from 'manager/LocalStorageManager';
-
 import PageBaseContainer from 'redux/containers/PageBaseContainer';
-
 import LocalStorageConst from 'constants/LocalStorageConst';
 
 const styles = (theme) => ({
@@ -547,13 +527,13 @@ class DashboardPage extends React.Component {
                 return (
                     <Sticker key={block.i}>
                         <HeatMap
-                            zoom={3}
+                            zoom={1}
                             minZoom={2}
                             maxZoom={17}
                             blur={40}
-                            radius={30}
-                            longitude={127.024792}
-                            latitude={37.504296}
+                            radius={40}
+                            longitude={36.7538}
+                            latitude={3.0588}
                             pointList={pointList}
                         />
                     </Sticker>
