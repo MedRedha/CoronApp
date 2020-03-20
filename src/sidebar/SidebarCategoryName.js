@@ -1,7 +1,7 @@
 // src/sidebar/SidebarCategoryName.js
 
 const SidebarCategoryName = {
-    STATISTICS: 'STATISTICS',
-}
+    STATISTICS: 'MENU',
+};
 
 export default SidebarCategoryName;
