@@ -15,9 +15,9 @@ var morgan = require('morgan');
 const envFilePath =
     process.env.NODE_ENV === 'production' ? '.env' : '.env.development';
 const envLoadResult = require('dotenv').config({ path: envFilePath });
-if (envLoadResult.error) {
-    throw envLoadResult.error;
-}
+// if (envLoadResult.error) {
+//     throw envLoadResult.error;
+// }
 // console.log(envLoadResult.parsed);
 
 // Load StickyBoard config file
