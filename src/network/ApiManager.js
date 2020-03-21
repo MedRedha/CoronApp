@@ -1,12 +1,7 @@
-// src/network/ApiManager.StickyBoard.js
-
 import RestClient from './RestClient';
 import UrlList from './UrlList';
 
 const ApiManager = {
-    /**
-     * Your App's APIs
-     */
     Corona: {
         readBrief: (callback) => {
             RestClient.sendGetRequest(UrlList.Corona.getBriefUrl(), callback);
@@ -17,9 +12,12 @@ const ApiManager = {
         },
 
         readTimeseries: (callback) => {
-            RestClient.sendGetRequest(UrlList.Corona.getTimeseriesUrl(), callback);
+            RestClient.sendGetRequest(
+                UrlList.Corona.getTimeseriesUrl(),
+                callback
+            );
         },
     },
-}
+};
 
 export default ApiManager;
