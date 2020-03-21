@@ -74,7 +74,9 @@ class App extends React.Component {
             <MuiThemeProvider theme={muiTheme}>
                 <Router>
                     <Switch>
-                        {/* Signing pages (FullScreenLayout) */}
+                        {/*Signing pages (FullScreenLayout) */}
+                        {/* Not found */}
+                        <Route path="*" component={NotFoundPage} />
                         {false}
 
                         {/* other pages (Layout) */}
@@ -102,8 +104,6 @@ class App extends React.Component {
                                         path="/statistics/risk_ranking"
                                         component={RiskRankingPage}
                                     />
-                                    {/* Not found */}
-                                    <Route path="*" component={NotFoundPage} />
                                 </Switch>
                             </Layout>
                         </Route>
