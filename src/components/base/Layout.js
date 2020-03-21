@@ -4,44 +4,24 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { withStyles } from '@material-ui/core/styles';
-import { grey } from '@material-ui/core/colors';
 import Drawer from '@material-ui/core/Drawer';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import Hidden from '@material-ui/core/Hidden';
 import Avatar from '@material-ui/core/Avatar';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
-import CardMedia from '@material-ui/core/CardMedia';
-import CardContent from '@material-ui/core/CardContent';
-import CardActions from '@material-ui/core/CardActions';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
-import FormControl from '@material-ui/core/FormControl';
-import InputLabel from '@material-ui/core/InputLabel';
-import Select from '@material-ui/core/Select';
-import Divider from '@material-ui/core/Divider';
 
 import MenuIcon from '@material-ui/icons/Menu';
 import ColorLens from '@material-ui/icons/ColorLens';
-import Lock from '@material-ui/icons/Lock';
-import Person from '@material-ui/icons/Person';
-import PowerSettingsNew from '@material-ui/icons/PowerSettingsNew';
-import AccountCircle from '@material-ui/icons/AccountCircle';
-import SocialNotifications from '@material-ui/icons/Notifications';
-import Settings from '@material-ui/icons/Settings';
 import Info from '@material-ui/icons/Info';
 import Warning from '@material-ui/icons/Warning';
 import ErrorOutline from '@material-ui/icons/ErrorOutline';
 
-import ApiManager from 'network/ApiManager';
 import StatusCode from 'network/StatusCode';
 import CookieManager from 'network/CookieManager';
 
