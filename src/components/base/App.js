@@ -1,8 +1,4 @@
-// src/components/base/App.js
-
 import React, { useState } from 'react';
-import ReactDOM from 'react-dom';
-import PropTypes from 'prop-types';
 import {
     BrowserRouter as Router,
     Route,
@@ -11,7 +7,6 @@ import {
 } from 'react-router-dom';
 import loadable from '@loadable/component';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-
 // Layout
 import Layout from './Layout';
 import FullScreenLayout from './FullScreenLayout';
@@ -106,6 +101,7 @@ class App extends React.Component {
                                         path="/statistics/risk_ranking"
                                         component={RiskRankingPage}
                                     />
+                                    {/*404 Error*/}
                                     <Route
                                         path="*"
                                         component={() => {
