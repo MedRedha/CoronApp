@@ -118,6 +118,7 @@ const initialBlocks = [
 ];
 
 class DashboardPage extends React.Component {
+    lng;
     constructor(props) {
         super(props);
 
@@ -125,10 +126,21 @@ class DashboardPage extends React.Component {
             LocalStorageConst.KEY.SELECTED_COUNTRY,
             'Algeria, Algiers'
         );
+        const lng = LocalStorageManager.getItem(
+            LocalStorageConst.KEY.LONG,
+            '1.6596'
+        );
+        const lat = LocalStorageManager.getItem(
+            LocalStorageConst.KEY.LAT,
+            '28.0339'
+        );
 
         this.state = {
             // Set initially selected country
             selectedCountryName: initialCountryName,
+            // Set initial location
+            lng: lng,
+            lat: lat,
             // Data
             brief: null,
             countryLatestDict: {},
@@ -157,114 +169,107 @@ class DashboardPage extends React.Component {
     };
 
     readBriefCallback = (statusCode, response) => {
-        switch (statusCode) {
-            case StatusCode.OK:
-                this.setState({
-                    brief: response,
-                });
-                break;
-            default:
-                alert(response.msg);
-                break;
+        if (statusCode === StatusCode.OK) {
+            this.setState({
+                brief: response,
+            });
+        } else {
+            alert(response.msg);
         }
     };
 
     readLatestCallback = (statusCode, response) => {
-        switch (statusCode) {
-            case StatusCode.OK:
-                let countryLatestDict = {};
+        if (statusCode === StatusCode.OK) {
+            let countryLatestDict = {};
+            response.forEach((data) => {
+                const {
+                    countryregion,
+                    provincestate,
+                    location,
+                    lng,
+                    lat,
+                    confirmed,
+                    deaths,
+                    recovered,
+                    lastupdate,
+                } = data;
 
-                response.forEach((data) => {
-                    const {
-                        countryregion,
-                        provincestate,
-                        location,
-                        confirmed,
-                        deaths,
-                        recovered,
-                        lastupdate,
-                    } = data;
+                // Extract country region list
+                let name = countryregion;
+                if (provincestate !== '') {
+                    name += ` (${provincestate})`;
+                }
 
-                    // Extract country region list
-                    let name = countryregion;
-                    if (provincestate !== '') {
-                        name += ` (${provincestate})`;
-                    }
-
-                    countryLatestDict[name] = {
-                        name: name,
-                        location: location,
-                        confirmed: confirmed,
-                        deaths: deaths,
-                        recovered: recovered,
-                        lastUpdate: lastupdate,
-                    };
-                });
-
-                this.setState({
-                    countryLatestDict: countryLatestDict,
-                });
-                break;
-            default:
-                alert(response.msg);
-                break;
+                countryLatestDict[name] = {
+                    name: name,
+                    location: location,
+                    lng: lng,
+                    lat: lat,
+                    confirmed: confirmed,
+                    deaths: deaths,
+                    recovered: recovered,
+                    lastUpdate: lastupdate,
+                };
+            });
+            this.setState({
+                countryLatestDict: countryLatestDict,
+            });
+        } else {
+            alert(response.msg);
         }
     };
+    countryregion;
+    provincestate;
 
     readTimeseriesCallback = (statusCode, response) => {
-        switch (statusCode) {
-            case StatusCode.OK:
-                let countryTimeseriesDict = {};
+        if (statusCode === StatusCode.OK) {
+            let countryTimeseriesDict = {};
+            response.sort((a, b) => {
+                return `${a.countryregion}${a.provincestate}` <
+                    `${b.countryregion}${b.provincestate}`
+                    ? -1
+                    : 1;
+            });
+            response.forEach((data) => {
+                const {
+                    countryregion,
+                    provincestate,
+                    location,
+                    timeseries,
+                    lastupdate,
+                } = data;
 
-                // Sort country by name
-                response.sort((a, b) => {
-                    return `${a.countryregion}${a.provincestate}` <
-                        `${b.countryregion}${b.provincestate}`
-                        ? -1
-                        : 1;
-                });
+                // Extract country region list
+                let name = countryregion;
+                if (provincestate !== '') {
+                    name += ` (${provincestate})`;
+                }
 
-                response.forEach((data) => {
-                    const {
-                        countryregion,
-                        provincestate,
-                        location,
-                        timeseries,
-                        lastupdate,
-                    } = data;
-
-                    // Extract country region list
-                    let name = countryregion;
-                    if (provincestate !== '') {
-                        name += ` (${provincestate})`;
+                // Extract timeseries data for each country region
+                const timeseriesData = timeseries;
+                const convertedTimeseries = Object.keys(timeseriesData).map(
+                    (key) => {
+                        return {
+                            ...timeseriesData[key],
+                            date: key,
+                        };
                     }
+                );
 
-                    // Extract timeseries data for each country region
-                    const timeseriesData = timeseries;
-                    const convertedTimeseries = Object.keys(timeseriesData).map(
-                        (key) => {
-                            return {
-                                ...timeseriesData[key],
-                                date: key,
-                            };
-                        }
-                    );
-
-                    countryTimeseriesDict[name] = {
-                        name: name,
-                        location: location,
-                        timeseries: convertedTimeseries,
-                        lastUpdate: lastupdate,
-                    };
-                });
-
-                this.setState({
-                    countryTimeseriesDict: countryTimeseriesDict,
-                });
-                break;
-            default:
-                alert(response.msg);
-                break;
+                countryTimeseriesDict[name] = {
+                    name: name,
+                    location: location,
+                    lng: location.lng,
+                    lat: location.lat,
+                    timeseries: convertedTimeseries,
+                    lastUpdate: lastupdate,
+                };
+            });
+            this.setState({
+                countryTimeseriesDict: countryTimeseriesDict,
+            });
+        } else {
+            alert(response.msg);
         }
     };
 
@@ -276,15 +281,21 @@ class DashboardPage extends React.Component {
             countryTimeseriesDict,
         } = data;
         const { theme } = this.props;
-
         const colors = theme.colors.colorArray;
-
         const selectedCountry = countryTimeseriesDict[selectedCountryName];
         const targetTimeseriesData = selectedCountry
             ? selectedCountry.timeseries
             : [];
 
         const selectedCountryLatest = countryLatestDict[selectedCountryName];
+
+        const lng = selectedCountryLatest
+            ? selectedCountryLatest.location.lng
+            : '1.6596';
+
+        const lat = selectedCountryLatest
+            ? selectedCountryLatest.location.lat
+            : '28.0339';
 
         const pointList = Object.values(countryLatestDict).map(
             (countryLatest) => {
@@ -532,8 +543,8 @@ class DashboardPage extends React.Component {
                             maxZoom={17}
                             blur={40}
                             radius={40}
-                            longitude={1.6596}
-                            latitude={28.0339}
+                            longitude={lng}
+                            latitude={lat}
                             pointList={pointList}
                         />
                     </Sticker>
