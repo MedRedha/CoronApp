@@ -110,12 +110,12 @@ class DrawerMenu extends React.Component {
     };
 
     updatePermittedMenuList = (permissionKeyArray) => {
-        var permittedMenuDict = {};
+        const permittedMenuDict = {};
 
         Object.keys(SidebarMenuDict).map((sidebarCategoryKey) => {
             let categoryMenus = SidebarMenuDict[sidebarCategoryKey];
 
-            var categoryMenuArray = [];
+            const categoryMenuArray = [];
             categoryMenus.map((menu) => {
                 if (
                     !menu.need_permission ||
