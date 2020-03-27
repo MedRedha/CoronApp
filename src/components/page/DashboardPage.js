@@ -118,7 +118,6 @@ const initialBlocks = [
 ];
 
 class DashboardPage extends React.Component {
-    lng;
     constructor(props) {
         super(props);
 
@@ -126,25 +125,16 @@ class DashboardPage extends React.Component {
             LocalStorageConst.KEY.SELECTED_COUNTRY,
             'Algeria, Algiers'
         );
-        const lng = LocalStorageManager.getItem(
-            LocalStorageConst.KEY.LONG,
-            '1.6596'
-        );
-        const lat = LocalStorageManager.getItem(
-            LocalStorageConst.KEY.LAT,
-            '28.0339'
-        );
 
         this.state = {
             // Set initially selected country
             selectedCountryName: initialCountryName,
-            // Set initial location
-            lng: lng,
-            lat: lat,
             // Data
             brief: null,
             countryLatestDict: {},
             countryTimeseriesDict: {},
+            lng: 1,
+            lat: 28.7,
         };
     }
 
@@ -186,8 +176,6 @@ class DashboardPage extends React.Component {
                     countryregion,
                     provincestate,
                     location,
-                    lng,
-                    lat,
                     confirmed,
                     deaths,
                     recovered,
@@ -203,8 +191,6 @@ class DashboardPage extends React.Component {
                 countryLatestDict[name] = {
                     name: name,
                     location: location,
-                    lng: lng,
-                    lat: lat,
                     confirmed: confirmed,
                     deaths: deaths,
                     recovered: recovered,
@@ -259,8 +245,6 @@ class DashboardPage extends React.Component {
                 countryTimeseriesDict[name] = {
                     name: name,
                     location: location,
-                    lng: location.lng,
-                    lat: location.lat,
                     timeseries: convertedTimeseries,
                     lastUpdate: lastupdate,
                 };
@@ -286,17 +270,7 @@ class DashboardPage extends React.Component {
         const targetTimeseriesData = selectedCountry
             ? selectedCountry.timeseries
             : [];
-
         const selectedCountryLatest = countryLatestDict[selectedCountryName];
-
-        const lng = selectedCountryLatest
-            ? selectedCountryLatest.location.lng
-            : '1.6596';
-
-        const lat = selectedCountryLatest
-            ? selectedCountryLatest.location.lat
-            : '28.0339';
-
         const pointList = Object.values(countryLatestDict).map(
             (countryLatest) => {
                 return {
@@ -538,13 +512,13 @@ class DashboardPage extends React.Component {
                 return (
                     <Sticker key={block.i}>
                         <HeatMap
-                            zoom={3.5}
+                            zoom={4.5}
                             minZoom={2}
                             maxZoom={17}
                             blur={40}
                             radius={40}
-                            longitude={lng}
-                            latitude={lat}
+                            longitude={data.lng}
+                            latitude={data.lat}
                             pointList={pointList}
                         />
                     </Sticker>
