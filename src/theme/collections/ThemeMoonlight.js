@@ -1,10 +1,21 @@
 // theme/collections/ThemeMoonlight.js
 
 import {
-    red, green, blue, yellow,
-    amber, orange, deepOrange, purple,
-    indigo, blueGrey, grey, teal, cyan,
-    lightBlue, deepPurple
+    red,
+    green,
+    blue,
+    yellow,
+    amber,
+    orange,
+    deepOrange,
+    purple,
+    indigo,
+    blueGrey,
+    grey,
+    teal,
+    cyan,
+    lightBlue,
+    deepPurple,
 } from '@material-ui/core/colors';
 
 const ThemeMoonlight = {
@@ -57,19 +68,19 @@ const ThemeMoonlight = {
     overrides: {
         MuiAppBar: {
             colorPrimary: {
-                backgroundColor: blueGrey[700],      // AppBar background color
+                backgroundColor: blueGrey[700], // AppBar background color
                 color: '#ffffff',
             },
         },
         MuiDrawer: {
             paper: {
-                backgroundColor: blueGrey[800],     // Drawer background color
-            }
+                backgroundColor: blueGrey[800], // Drawer background color
+            },
         },
         MuiIconButton: {
             root: {
                 color: '#ffffff',
-            }
+            },
         },
         MuiFab: {
             primary: {
@@ -77,15 +88,15 @@ const ThemeMoonlight = {
                 color: grey[800],
                 '&:hover': {
                     backgroundColor: yellow[700],
-                }
-            }
+                },
+            },
         },
-        MuiSpeedDialAction:{
+        MuiSpeedDialAction: {
             fab: {
                 backgroundColor: grey[800],
                 color: '#ffffff',
-            }
-        }
+            },
+        },
     },
 };
 
