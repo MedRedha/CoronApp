@@ -1,5 +1,3 @@
-// src/components/base/Layout.js
-
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -15,22 +13,17 @@ import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
-
 import MenuIcon from '@material-ui/icons/Menu';
 import ColorLens from '@material-ui/icons/ColorLens';
 import Info from '@material-ui/icons/Info';
 import Warning from '@material-ui/icons/Warning';
 import ErrorOutline from '@material-ui/icons/ErrorOutline';
-
 import StatusCode from 'network/StatusCode';
 import CookieManager from 'network/CookieManager';
-
 import DrawerMenu from './DrawerMenu';
-
 import Const from '../../constants/Const';
-
 import DateUtil from '../../utils/DateUtil';
-
+import { white } from 'color-name';
 require('react-grid-layout/css/styles.css');
 require('react-resizable/css/styles.css');
 require('../../static/css/react-grid-layout.css');
@@ -49,7 +42,7 @@ const styles = (theme) => ({
     },
     appBar: {
         zIndex: theme.zIndex.drawer + 1,
-        // position: 'absolute',
+        position: 'absolute',
         height: 56,
         [theme.breakpoints.up('sm')]: {
             height: 64,
@@ -60,6 +53,8 @@ const styles = (theme) => ({
         // },
     },
     appBarTitle: {
+        alignSelf: 'center',
+        background: 'white',
         fontSize: 16,
         '&:hover': {
             cursor: 'pointer',
@@ -79,7 +74,7 @@ const styles = (theme) => ({
         },
     },
     menuIcon: {
-        // color: theme.colors.colorDark,
+        color: theme.colors.colorDark,
     },
     menuCategoryText: {
         display: 'block',
@@ -90,7 +85,7 @@ const styles = (theme) => ({
         color: theme.colors.drawerMenuCategoryText,
     },
     notiIcon: {
-        // color: theme.colors.colorDark,
+        color: theme.colors.colorDark,
     },
     notiDrawer: {
         width: '80%',
@@ -369,8 +364,8 @@ class Layout extends React.Component {
             (child) => {
                 return React.cloneElement(child, {
                     // store: store,
-                    // showMessageSnackbar: this.props.showMessageSnackbar,
-                    // hideMessageSnackbar: this.props.hideMessageSnackbar,
+                    showMessageSnackbar: this.props.showMessageSnackbar,
+                    hideMessageSnackbar: this.props.hideMessageSnackbar,
                 });
             }
         );
@@ -403,14 +398,21 @@ class Layout extends React.Component {
                     {/* AppBar */}
                     <AppBar position="absolute" className={classes.appBar}>
                         <Toolbar>
-                            <Hidden lgUp>
-                                <IconButton
-                                    color="inherit"
-                                    aria-label="open drawer"
-                                    onClick={this.handleMenuDrawerToggle}>
-                                    <MenuIcon />
-                                </IconButton>
-                            </Hidden>
+                            {/*<Hidden lgUp>*/}
+                            {/*    <IconButton*/}
+                            {/*        color="inherit"*/}
+                            {/*        aria-label="open drawer"*/}
+                            {/*        onClick={this.handleMenuDrawerToggle}>*/}
+                            {/*        <MenuIcon />*/}
+                            {/*    </IconButton>*/}
+                            {/*</Hidden>*/}
+
+                            <IconButton
+                                color="inherit"
+                                aria-label="open drawer"
+                                onClick={this.handleMenuDrawerToggle}>
+                                <MenuIcon />
+                            </IconButton>
 
                             {/*<Hidden xsDown>*/}
                             {/*    <div*/}
@@ -430,7 +432,10 @@ class Layout extends React.Component {
                             {/*</Hidden>*/}
 
                             <Typography
-                                style={{ marginLeft: 40 }}
+                                alignCenter
+                                style={{
+                                    marginLeft: 40,
+                                }}
                                 type="title"
                                 color="inherit"
                                 noWrap
@@ -529,8 +534,8 @@ class Layout extends React.Component {
                     {/* Drawer - Desktop */}
                     <Hidden mdDown>
                         <Drawer
-                            variant="permanent"
-                            open
+                            variant="temporary"
+                            open={this.state.menuDrawerOpen}
                             classes={{
                                 paper: classes.drawerPaper,
                             }}>
