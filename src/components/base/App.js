@@ -5,19 +5,18 @@ import {
     Switch,
     Redirect,
 } from 'react-router-dom';
-import loadable from '@loadable/component';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 // Layout
 import Layout from './Layout';
 import FullScreenLayout from './FullScreenLayout';
 // Statistics
-const DashboardPage = loadable(() => import('components/page/DashboardPage'));
-const RiskRankingPage = loadable(() =>
-    import('components/page/RiskRankingPage')
-);
-// Not found
-const NotFoundPage = loadable(() => import('components/page/NotFoundPage'));
-
+import DashboardPage from '../page/DashboardPage';
+// Risk Ranking
+import RiskRankingPage from '../page/RiskRankingPage';
+// Not Found Page
+import NotFoundPage from '../page/NotFoundPage';
+// Loading Page
+import LoadingPage from '../page/LoadingPage';
 // Manager
 import LocalStorageManager from 'manager/LocalStorageManager';
 // Theme
