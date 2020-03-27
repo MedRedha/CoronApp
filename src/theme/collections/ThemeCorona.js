@@ -1,10 +1,22 @@
 // theme/collections/ThemeCorona.js
 
 import {
-    red, green, blue, yellow,
-    amber, orange, deepOrange, purple,
-    indigo, blueGrey, grey, teal, cyan,
-    lightBlue, deepPurple, pink,
+    red,
+    green,
+    blue,
+    yellow,
+    amber,
+    orange,
+    deepOrange,
+    purple,
+    indigo,
+    blueGrey,
+    grey,
+    teal,
+    cyan,
+    lightBlue,
+    deepPurple,
+    pink,
 } from '@material-ui/core/colors';
 
 const ThemeCorona = {
@@ -58,19 +70,19 @@ const ThemeCorona = {
     overrides: {
         MuiAppBar: {
             colorPrimary: {
-                backgroundColor: purple[900],      // AppBar background color
+                backgroundColor: purple[900], // AppBar background color
                 color: '#ffffff',
             },
         },
         MuiDrawer: {
             paper: {
-                backgroundColor: grey[300],     // Drawer background color
-            }
+                backgroundColor: grey[300], // Drawer background color
+            },
         },
         MuiIconButton: {
             root: {
                 color: '#ffffff',
-            }
+            },
         },
         MuiFab: {
             primary: {
@@ -78,15 +90,15 @@ const ThemeCorona = {
                 color: grey[200],
                 '&:hover': {
                     backgroundColor: deepPurple[700],
-                }
-            }
+                },
+            },
         },
-        MuiSpeedDialAction:{
+        MuiSpeedDialAction: {
             fab: {
                 backgroundColor: grey[800],
                 color: '#ffffff',
-            }
-        }
+            },
+        },
     },
 };
 
