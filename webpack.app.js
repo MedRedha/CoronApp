@@ -73,6 +73,10 @@ const config = {
                 loaders: ['style-loader', 'css-loader'],
             },
             {
+                test: /\.html$/i,
+                loader: 'html-loader',
+            },
+            {
                 test: /\.(ico|png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/,
                 use: {
                     loader: 'file-loader',
