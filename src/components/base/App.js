@@ -68,11 +68,23 @@ class App extends React.Component {
             <MuiThemeProvider theme={muiTheme}>
                 <Router>
                     <Switch>
+                        {/*NotFound*/}
                         <Route path="/NotFoundPage">
                             <FullScreenLayout path="/NotFoundPage">
                                 <Route
+                                    exact
                                     path="/NotFoundPage"
-                                    component={NotFoundPage}
+                                    render={() => <NotFoundPage />}
+                                />
+                            </FullScreenLayout>
+                        </Route>
+                        {/*SplashScreen*/}
+                        <Route path="/Welcome">
+                            <FullScreenLayout path="/Welcome">
+                                <Route
+                                    exact
+                                    path="/Welcome"
+                                    render={() => <LoadingPage />}
                                 />
                             </FullScreenLayout>
                         </Route>
