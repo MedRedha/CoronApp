@@ -1,31 +1,56 @@
-// src/components/LoadingPage.js
-
 import React from 'react';
-import { withStyles } from '@material-ui/core/styles';
-import CircularProgress from '@material-ui/core/CircularProgress';
+import Delayed from 'react-delayed';
+import Welcome from 'react-welcome-page';
+import UIfx from 'uifx';
+import './../../static/css/loading.css';
 
-const styles = (theme) => ({
-    root: {
-        width: '100%',
-        height: '100%',
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-});
+let text = <div className={'LogoText'}>WuuD Team</div>;
+let textAnimated = <div className={'LogoText'}>WuuD Team</div>;
+let logo = './../../static/image/WuuD.ico';
 
-// Unused
-class LoadingPage extends React.Component {
+export default class LoadingPage extends React.Component {
     render() {
-        const { classes, theme } = this.props;
-
         return (
-            <div className={classes.root}>
-                <CircularProgress color="primary" size={50} />
+            <div className="bg">
+                <Welcome
+                    loopDuration={2200}
+                    data={[
+                        {
+                            image: logo,
+                            imageAnimation: 'rotateIn',
+                            textAnimation: 'bounceIn',
+                            text: text,
+                            textColor: 'whitesmoke',
+                        },
+                    ]}
+                />
+                <Delayed mounted={true} mountAfter={2200} unmountAfter={4400}>
+                    <Welcome
+                        loopDuration={2200}
+                        data={[
+                            {
+                                image: logo,
+                                imageAnimation: 'rubberBand',
+                                textAnimation: 'hinge',
+                                text: textAnimated,
+                                textColor: 'whitesmoke',
+                            },
+                        ]}
+                    />
+                </Delayed>
+                <Delayed mounted={true} mountAfter={4400} unmountAfter={8800}>
+                    <div>
+                        <div className="body">
+                            <div className="main">
+                                <img src={logo} alt={logo} />
+                                <div className="slogan anim-typewriter">
+                                    Developers by passion
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </Delayed>
             </div>
         );
     }
 }
-
-export default withStyles(styles, { withTheme: true })(LoadingPage);
