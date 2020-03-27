@@ -85,25 +85,25 @@ class App extends React.Component {
                                     <Route
                                         exact
                                         path="/"
-                                        component={() => {
-                                            return (
-                                                <Redirect to="/statistics/dashboard" />
-                                            );
+                                        render={() => {
+                                            return <Redirect to="/Welcome" />;
                                         }}
                                     />
-                                    {/* Statistics */}
+                                    {/*Statistics*/}
                                     <Route
+                                        exact
                                         path="/statistics/dashboard"
-                                        component={DashboardPage}
+                                        render={() => <DashboardPage />}
                                     />
                                     <Route
+                                        exact
                                         path="/statistics/risk_ranking"
-                                        component={RiskRankingPage}
+                                        render={() => <RiskRankingPage />}
                                     />
                                     {/*404 Error*/}
                                     <Route
                                         path="*"
-                                        component={() => {
+                                        render={() => {
                                             return (
                                                 <Redirect to="/NotFoundPage" />
                                             );
