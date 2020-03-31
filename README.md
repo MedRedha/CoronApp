@@ -150,4 +150,4 @@ Contributing to CoronApp is a piece of :cake:, read the [contributing guidelines
 
 The code is available under the [MIT](https://github.com/MedRedha/CoronApp/blob/master/LICENSE) license.
 
-###### [WuuD®](http://wuud.net/) - in code we trust -
+###### [WuuD®](http://wuud.net/) - In code we trust -
