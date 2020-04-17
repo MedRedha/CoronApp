@@ -2,7 +2,7 @@
 
 <p align="center">
 	<a href="https://wuud.net">
-		<img width="160" height="169" src="https://github.com/TeamWuuD/WuuD-Website/blob/master/favicon.ico?raw=true" alt="wuud">
+		<img width="160" height="169" src="https://github.com/WuuD-Team/WuuD-Website/blob/master/favicon.ico?raw=true" alt="wuud">
 	<img width="160" height="160" src="https://i.ya-webdesign.com/images/virus-transparent-animated-gif.gif" alt="coronapp">
 	</a>
 </p>
