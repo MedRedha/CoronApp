@@ -3,7 +3,7 @@
 <p align="center">
 	<a href="https://wuud.net">
 		<img width="160" height="169" src="https://github.com/WuuD-Team/WuuD-Website/blob/master/favicon.ico?raw=true" alt="wuud">
-	<img width="160" height="160" src="https://i.ya-webdesign.com/images/virus-transparent-animated-gif.gif" alt="coronapp">
+	<img width="160" height="160" src="https://www.centennialco.gov/files/sharedassets/public/images/residents/covid-19.png?dimension=pageimage&w=480" alt="coronapp">
 	</a>
 </p>
 <p align="center">
@@ -31,6 +31,7 @@
 
 <p align="center" style="justify-content: space-between">
         	<img width="130" height="150" src="https://github.com/soaple/stickyboard/blob/master/src/static/image/StickyBoard_logo.png?raw=true" alt="stickyboard">
+		<img width="100"></img>
 		<img width="160" height="150" src="https://logo-logos.com/wp-content/uploads/2016/10/Docker_logo.png" alt="docker">
 </p>
 
@@ -150,4 +151,6 @@ Contributing to CoronApp is a piece of :cake:, read the [contributing guidelines
 
 The code is available under the [MIT](https://github.com/MedRedha/CoronApp/blob/master/LICENSE) license.
 
-###### [WuuD®](http://wuud.net/) - In code we trust -
+<p align="center">
+ <b>WuuD® - in code we trust -
+</p>
