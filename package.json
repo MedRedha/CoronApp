@@ -41,7 +41,7 @@
         "image-size": "^0.5.1",
         "jsdom": "latest",
         "json-loader": "^0.5.4",
-        "jsonwebtoken": "^7.4.3",
+        "jsonwebtoken": "^9.0.0",
         "manager": "^1.0.9",
         "material-ui-pickers": "^1.0.0-rc.17",
         "moment": "^2.24.0",
